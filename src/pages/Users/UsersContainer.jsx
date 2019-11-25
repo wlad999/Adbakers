@@ -4,7 +4,6 @@ import User from "../../components/User/User";
 import { connect } from "react-redux";
 import styles from "./Users.module.css";
 import UsersOnPage from "./UsersOnPage";
-import Preloader from "../../components/preloader/Preloader";
 import {
   getUserDataThunk,
   getUsersOnPageThunk,
@@ -43,7 +42,6 @@ class UsersContainer extends React.Component {
     }
 
     const token = localStorage.getItem("userToken");
-    // console.log("TOKET in localStoreg", token);
 
     const {
       users,
@@ -60,7 +58,6 @@ class UsersContainer extends React.Component {
     return (
       <div className={styles.wrapper}>
         {isFetching ? (
-          // <Preloader />
           <h2 className={styles.wait}>PLEASE WAIT A LITTLE BIT</h2>
         ) : (
           <UsersOnPage

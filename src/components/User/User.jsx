@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./User.module.css";
 import userImg from "../../assets/images/users.png";
-import Preloader from "../../components/preloader/Preloader";
 
 const User = props => {
   let [userData, setUserData] = useState(props.userData);
@@ -24,9 +23,17 @@ const User = props => {
           </button>
         </div>
         <div className={styles.scroll}>
-          <p>{userData ? userData.first_name : "PLEASE WAIT A LITTLE BIT"}</p>
-          <p>{userData ? userData.last_name : null}</p>
-          <p>{userData ? userData.email : null}</p>
+          {props.isFetching ? (
+            <p>"PLEASE WAIT A LITTLE BIT"</p>
+          ) : (
+            <>
+              <p>
+                {userData ? userData.first_name : "PLEASE WAIT A LITTLE BIT"}
+              </p>
+              <p>{userData ? userData.last_name : null}</p>
+              <p>{userData ? userData.email : null}</p>
+            </>
+          )}
         </div>
       </div>
     </div>
