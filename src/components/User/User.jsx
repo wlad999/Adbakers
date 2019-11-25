@@ -17,15 +17,15 @@ const User = props => {
     <div className={styles.container}>
       <div className={styles.box}>
         <div className={styles.firstLine}>
-          <img src={userData.avatar || userImg} alt="avatar" />
+          <img src={userData ? userData.avatar : userImg} alt="avatar" />
           <button className={styles.closeBut} onClick={closeModal}>
             X
           </button>
         </div>
         <div className={styles.scroll}>
           <p>{userData ? userData.first_name : "PLEASE WAIT A LITTLE BIT"}</p>
-          <p>{userData.last_name}</p>
-          <p>{userData.email}</p>
+          <p>{userData ? userData.last_name : null}</p>
+          <p>{userData ? userData.email : null}</p>
         </div>
       </div>
     </div>
