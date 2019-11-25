@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Adbakers/static/css/main.54ebe553.chunk.css",
-    "main.js": "/Adbakers/static/js/main.8862c803.chunk.js",
-    "main.js.map": "/Adbakers/static/js/main.8862c803.chunk.js.map",
+    "main.css": "/Adbakers/static/css/main.d5cfe6da.chunk.css",
+    "main.js": "/Adbakers/static/js/main.ecb645d1.chunk.js",
+    "main.js.map": "/Adbakers/static/js/main.ecb645d1.chunk.js.map",
     "runtime~main.js": "/Adbakers/static/js/runtime~main.43059c88.js",
     "runtime~main.js.map": "/Adbakers/static/js/runtime~main.43059c88.js.map",
-    "static/js/2.208d84f6.chunk.js": "/Adbakers/static/js/2.208d84f6.chunk.js",
-    "static/js/2.208d84f6.chunk.js.map": "/Adbakers/static/js/2.208d84f6.chunk.js.map",
+    "static/js/2.ffe77192.chunk.js": "/Adbakers/static/js/2.ffe77192.chunk.js",
+    "static/js/2.ffe77192.chunk.js.map": "/Adbakers/static/js/2.ffe77192.chunk.js.map",
     "index.html": "/Adbakers/index.html",
-    "precache-manifest.2d2700e7a1aab05b3341ac8815be5b76.js": "/Adbakers/precache-manifest.2d2700e7a1aab05b3341ac8815be5b76.js",
+    "precache-manifest.8bbe465503f39e5a6aead5cac72967a7.js": "/Adbakers/precache-manifest.8bbe465503f39e5a6aead5cac72967a7.js",
     "service-worker.js": "/Adbakers/service-worker.js",
-    "static/css/main.54ebe553.chunk.css.map": "/Adbakers/static/css/main.54ebe553.chunk.css.map"
+    "static/css/main.d5cfe6da.chunk.css.map": "/Adbakers/static/css/main.d5cfe6da.chunk.css.map"
   }
 }
