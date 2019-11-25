@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/adbakers/static/css/main.4cf1fcb8.chunk.css",
-    "main.js": "/adbakers/static/js/main.fdefa0b7.chunk.js",
-    "main.js.map": "/adbakers/static/js/main.fdefa0b7.chunk.js.map",
-    "runtime~main.js": "/adbakers/static/js/runtime~main.529c6b51.js",
-    "runtime~main.js.map": "/adbakers/static/js/runtime~main.529c6b51.js.map",
-    "static/js/2.6790f7cb.chunk.js": "/adbakers/static/js/2.6790f7cb.chunk.js",
-    "static/js/2.6790f7cb.chunk.js.map": "/adbakers/static/js/2.6790f7cb.chunk.js.map",
-    "index.html": "/adbakers/index.html",
-    "precache-manifest.0c9c6198fa602bcc0c26e60c0b8a46be.js": "/adbakers/precache-manifest.0c9c6198fa602bcc0c26e60c0b8a46be.js",
-    "service-worker.js": "/adbakers/service-worker.js",
-    "static/css/main.4cf1fcb8.chunk.css.map": "/adbakers/static/css/main.4cf1fcb8.chunk.css.map"
+    "main.css": "/Adbakers/static/css/main.4cf1fcb8.chunk.css",
+    "main.js": "/Adbakers/static/js/main.d6cd59d3.chunk.js",
+    "main.js.map": "/Adbakers/static/js/main.d6cd59d3.chunk.js.map",
+    "runtime~main.js": "/Adbakers/static/js/runtime~main.43059c88.js",
+    "runtime~main.js.map": "/Adbakers/static/js/runtime~main.43059c88.js.map",
+    "static/js/2.f766edbd.chunk.js": "/Adbakers/static/js/2.f766edbd.chunk.js",
+    "static/js/2.f766edbd.chunk.js.map": "/Adbakers/static/js/2.f766edbd.chunk.js.map",
+    "index.html": "/Adbakers/index.html",
+    "precache-manifest.f41bfb83e4d005a849e1d74f3b0e329d.js": "/Adbakers/precache-manifest.f41bfb83e4d005a849e1d74f3b0e329d.js",
+    "service-worker.js": "/Adbakers/service-worker.js",
+    "static/css/main.4cf1fcb8.chunk.css.map": "/Adbakers/static/css/main.4cf1fcb8.chunk.css.map"
   }
 }
