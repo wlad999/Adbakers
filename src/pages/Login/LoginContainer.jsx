@@ -46,8 +46,9 @@ class LoginContainer extends React.Component {
         this.setState({
           error: ""
         });
+        return;
       }
-    }, 10);
+    }, 0);
   };
 
   redirectUser = data => {
@@ -82,7 +83,6 @@ class LoginContainer extends React.Component {
         login: "",
         password: ""
       });
-      console.log("WARKING");
     }
     if (resp.status === 200) {
       this.setState({ error: "" });

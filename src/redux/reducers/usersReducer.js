@@ -4,7 +4,8 @@ let initialState = {
   users: [],
   totalUsers: 0,
   currentPage: 1,
-  userData: false
+  userData: false,
+  isFetching: true
 };
 
 const usersReducer = (state = initialState, action) => {
@@ -25,6 +26,11 @@ const usersReducer = (state = initialState, action) => {
       return {
         ...state,
         userData: action.userData
+      };
+    case actionTypes.IS_FETCH:
+      return {
+        ...state,
+        isFetching: action.boolean
       };
 
     default:

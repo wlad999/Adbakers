@@ -23,7 +23,7 @@ const UsersOnPage = props => {
     setCurrentPage(1);
   }
 
-  let arrOfPosts = props.users.map(el => el);
+  let arrOfUsers = props.users.map(el => el);
 
   const onClick = user => {
     props.getUserDataThunk(user.id);
@@ -38,7 +38,7 @@ const UsersOnPage = props => {
         setCurrentPage={setCurrentPage}
       />
       <div className={styles.scroll}>
-        {arrOfPosts.map(post => {
+        {arrOfUsers.map(post => {
           return (
             <div className={styles.page} key={post.id}>
               <div className={styles.nav} onClick={() => onClick(post)}>

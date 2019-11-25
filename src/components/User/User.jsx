@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./User.module.css";
 import userImg from "../../assets/images/users.png";
+import Preloader from "../../components/preloader/Preloader";
 
 const User = props => {
   let [userData, setUserData] = useState(props.userData);

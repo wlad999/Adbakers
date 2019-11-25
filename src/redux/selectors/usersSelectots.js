@@ -11,3 +11,6 @@ export const getCurrentPage = state => {
 export const getUserData = state => {
   return state.usersPage.userData;
 };
+export const getIsFetching = state => {
+  return state.usersPage.isFetching;
+};

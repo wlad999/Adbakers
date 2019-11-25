@@ -1,6 +1,11 @@
 import { getUsersRequest, getUserDataRequest } from "../../api/request";
 import { actionTypes } from "./constants";
 
+export const toggleIsFetching = boolean => ({
+  type: actionTypes.IS_FETCH,
+  boolean
+});
+
 export const getUsersAC = data => ({
   type: actionTypes.GET_USERS,
   users: data.data,
@@ -17,15 +22,19 @@ export const currentPageAC = currentPage => ({
 });
 export const getUsersOnPageThunk = currentPage => {
   return dispatch => {
+    dispatch(toggleIsFetching(true));
     getUsersRequest(currentPage).then(response => {
       dispatch(getUsersAC(response.data));
+      dispatch(toggleIsFetching(false));
     });
   };
 };
 export const getUserDataThunk = id => {
   return dispatch => {
+    dispatch(toggleIsFetching(false));
     getUserDataRequest(id).then(response => {
       dispatch(setUserDataAC(response.data));
+      dispatch(toggleIsFetching(false));
     });
   };
 };

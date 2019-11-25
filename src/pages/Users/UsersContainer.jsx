@@ -4,6 +4,7 @@ import User from "../../components/User/User";
 import { connect } from "react-redux";
 import styles from "./Users.module.css";
 import UsersOnPage from "./UsersOnPage";
+import Preloader from "../../components/preloader/Preloader";
 import {
   getUserDataThunk,
   getUsersOnPageThunk,
@@ -14,7 +15,8 @@ import {
   getAllUsers,
   getCurrentPage,
   getTotalUsers,
-  getUserData
+  getUserData,
+  getIsFetching
 } from "../../redux/selectors/usersSelectots";
 import { getIsAuth } from "../../redux/selectors/loginSelectots";
 
@@ -41,7 +43,7 @@ class UsersContainer extends React.Component {
     }
 
     const token = localStorage.getItem("userToken");
-    console.log("TOKET in localStoreg", token);
+    // console.log("TOKET in localStoreg", token);
 
     const {
       users,
@@ -50,12 +52,17 @@ class UsersContainer extends React.Component {
       currentPageAC,
       totalUsers,
       getUserDataThunk,
-      setUserDataAC
+      setUserDataAC,
+      isFetching
     } = this.props;
+    console.log("isFetching", isFetching);
 
     return (
       <div className={styles.wrapper}>
-        <div className={styles.main}>
+        {isFetching ? (
+          // <Preloader />
+          <h2 className={styles.wait}>PLEASE WAIT A LITTLE BIT</h2>
+        ) : (
           <UsersOnPage
             users={users}
             getUserDataThunk={getUserDataThunk}
@@ -64,13 +71,14 @@ class UsersContainer extends React.Component {
             totalUsers={totalUsers}
             showHideUser={this.showHideUser}
           />
-        </div>
+        )}
 
         {this.state.showUser && (
           <User
             showHideUser={this.showHideUser}
             userData={userData}
             setUserDataAC={setUserDataAC}
+            isFetching={isFetching}
           />
         )}
       </div>
@@ -82,10 +90,12 @@ let MSTP = state => ({
   currentPage: getCurrentPage(state),
   totalUsers: getTotalUsers(state),
   userData: getUserData(state),
-  isAuth: getIsAuth(state)
+  isAuth: getIsAuth(state),
+  isFetching: getIsFetching(state)
 });
 
 export default connect(MSTP, {
+  getUsersOnPageThunk,
   getUsersOnPageThunk,
   getUserDataThunk,
   currentPageAC,

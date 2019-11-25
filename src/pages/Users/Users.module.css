@@ -1,8 +1,18 @@
+* {
+    outline: 1px solid red;
+}
+
 .selectedPage {
     font-weight: bold;
     margin: 5px;
     cursor: pointer;
     font-size: 15px;
+}
+
+.wait {
+    height: 100vh;
+    line-height: 100vh;
+    margin: auto;
 }
 
 .page {
