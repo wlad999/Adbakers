@@ -1,0 +1,29 @@
+.wrapper {
+  height: 45px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  border-top: 3px double #000080;
+
+}
+
+
+.nav {
+  padding-right: 10px;
+}
+
+.link {
+  padding: 0 2px 0 2px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+@media (min-width: 460px) {
+  .link {
+    font-size: 20px;
+    padding: 0 5px 0 5px;
+  }
+}

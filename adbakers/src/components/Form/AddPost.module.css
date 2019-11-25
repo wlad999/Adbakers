@@ -1,0 +1,13 @@
+.addPost {
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+.scroll {
+    overflow-y: auto;
+    height: 350px;
+}
+
+.warning {
+    color: red;
+}

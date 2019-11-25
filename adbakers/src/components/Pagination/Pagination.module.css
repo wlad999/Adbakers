@@ -1,0 +1,47 @@
+.selectedPage {
+    font-weight: bold;
+    margin: 3px;
+    cursor: pointer;
+    font-size: 15px;
+    width: 25px;
+    height: 25px;
+    outline: 2px solid gray;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    line-height: 25px;
+    background-color: lightgray;
+}
+
+.page {
+    font-size: 13px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    outline: 2px solid gray;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    line-height: 20px;
+    background-color: lightgray;
+}
+
+.arrow {
+    margin: 7px;
+    font-size: 15px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    outline: 2px solid gray;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    line-height: 20px;
+    background-color: lightgray;
+}
+
+.main {
+    padding-left: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
