@@ -27,11 +27,13 @@ const User = props => {
             <p>"PLEASE WAIT A LITTLE BIT"</p>
           ) : (
             <>
-              <p>
+              <p className={styles.text}>
                 {userData ? userData.first_name : "PLEASE WAIT A LITTLE BIT"}
               </p>
-              <p>{userData ? userData.last_name : null}</p>
-              <p>{userData ? userData.email : null}</p>
+              <p className={styles.text}>
+                {userData ? userData.last_name : null}
+              </p>
+              <p className={styles.text}>{userData ? userData.email : null}</p>
             </>
           )}
         </div>

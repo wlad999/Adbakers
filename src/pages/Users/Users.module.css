@@ -1,7 +1,3 @@
-* {
-    outline: 1px solid red;
-}
-
 .selectedPage {
     font-weight: bold;
     margin: 5px;
@@ -13,7 +9,11 @@
     height: 100vh;
     line-height: 100vh;
     margin: auto;
+    font-family: "Lato", AdobeInvisFont, Tahoma, MyriadPro-Regular, sans-serif;
+    font-weight: 700;
+    color: #555555;
 }
+
 
 .page {
     margin: 3px;
@@ -40,15 +40,16 @@
 .nav {
     text-decoration: none;
     padding: 10px;
+    font-weight: 700;
+    font-family: "Lato", AdobeInvisFont, Tahoma, MyriadPro-Regular, sans-serif;
+    color: #555555;
+
 }
 
-.text {
-    color: black;
-}
+
 
 p {
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 14px;
     margin: 5px;
 }
 

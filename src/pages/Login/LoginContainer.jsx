@@ -37,10 +37,10 @@ class LoginContainer extends React.Component {
         });
       } else if (
         (this.state.password.length > 0) &
-        (this.state.password.length > 18)
+        (this.state.password.length > 16)
       ) {
         this.setState({
-          error: "Пароль должен состоять максимум из 18 символов"
+          error: "Пароль должен состоять максимум из 16 символов"
         });
       } else {
         this.setState({
@@ -61,6 +61,9 @@ class LoginContainer extends React.Component {
     const { login, password } = this.state;
 
     if (login.length < 8 || password.length < 8) {
+      return;
+    }
+    if (login.length > 18 || password.length > 16) {
       return;
     }
 
@@ -125,11 +128,9 @@ class LoginContainer extends React.Component {
               <div className={styles.error}>
                 <p>{this.state.error}</p>
               </div>
-              <div className={styles.butModule}>
-                <button onClick={this.handleLogin} className={styles.button}>
-                  Вход
-                </button>
-              </div>
+              <button onClick={this.handleLogin} className={styles.button}>
+                Вход
+              </button>
             </form>
           </div>
         </div>
