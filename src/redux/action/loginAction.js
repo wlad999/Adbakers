@@ -13,8 +13,8 @@ export const sendLoginData = data => dispatch =>
         dispatch(setAuthUserData(JSON.parse(response.config.data), true));
         return response;
       }
-      if (response.status >= 400) {
-        return response;
-      }
+      // if (response.status >= 400) {
+      return response;
+      // }
     })
     .catch(error => console.log(error));

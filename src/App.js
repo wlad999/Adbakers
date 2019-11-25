@@ -8,12 +8,8 @@ import { Route } from "react-router-dom";
 function App() {
   return (
     <div className="app-wrapper">
-      <Route
-        exact
-        path="/users"
-        render={props => <UsersContainer {...props} />}
-      />
-      <Route path="/" render={props => <LoginContainer {...props} />} /> y{" "}
+      <Route path="/users" render={props => <UsersContainer {...props} />} />
+      <Route exact path="/" render={props => <LoginContainer {...props} />} />
     </div>
   );
 }

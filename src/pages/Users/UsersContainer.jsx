@@ -1,4 +1,5 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
 import User from "../../components/User/User";
 import { connect } from "react-redux";
 import styles from "./Users.module.css";
@@ -15,6 +16,7 @@ import {
   getTotalUsers,
   getUserData
 } from "../../redux/selectors/usersSelectots";
+import { getIsAuth } from "../../redux/selectors/loginSelectots";
 
 class UsersContainer extends React.Component {
   state = {
@@ -34,6 +36,10 @@ class UsersContainer extends React.Component {
   };
 
   render() {
+    if (!this.props.isAuth) {
+      return <Redirect to={"/"} />;
+    }
+
     const token = localStorage.getItem("userToken");
     console.log("TOKET in localStoreg", token);
 
@@ -75,7 +81,8 @@ let MSTP = state => ({
   users: getAllUsers(state),
   currentPage: getCurrentPage(state),
   totalUsers: getTotalUsers(state),
-  userData: getUserData(state)
+  userData: getUserData(state),
+  isAuth: getIsAuth(state)
 });
 
 export default connect(MSTP, {

@@ -70,21 +70,23 @@ class LoginContainer extends React.Component {
 
     this.props
       .sendLoginData(dataToLogin)
-      .then(({ data, status }) => this.handleErrorLogin(data, status))
+      .then(resp => this.handleErrorLogin(resp))
       .catch(error => console.log(error));
-    if (!this.props.isAuth) {
+  };
+
+  handleErrorLogin = resp => {
+    console.log("RESP", resp);
+    if (resp === undefined) {
       this.setState({
         error: "Неправильный пароль или логин",
         login: "",
         password: ""
       });
+      console.log("WARKING");
     }
-  };
-
-  handleErrorLogin = (data, status) => {
-    if (status === 200) {
-      this.redirectUser(data);
+    if (resp.status === 200) {
       this.setState({ error: "" });
+      this.redirectUser(resp.data);
     }
   };
 

@@ -43,16 +43,16 @@ const UsersOnPage = props => {
             <div className={styles.page} key={post.id}>
               <div className={styles.nav} onClick={() => onClick(post)}>
                 {post.first_name && (
-                  <div className={styles.text}>
+                  <p className={styles.text}>
                     NAME: {post.first_name.toUpperCase()}
-                  </div>
+                  </p>
                 )}
                 {post.last_name && (
-                  <div className={styles.text}>
-                    LAST NAME {post.last_name.toUpperCase()}
-                  </div>
+                  <p className={styles.text}>
+                    LAST NAME: {post.last_name.toUpperCase()}
+                  </p>
                 )}
-                {post.id && <div className={styles.text}>ID {post.id}</div>}
+                {post.id && <p className={styles.text}>ID {post.id}</p>}
               </div>
             </div>
           );
