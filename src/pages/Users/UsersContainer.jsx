@@ -92,15 +92,6 @@ let MSTP = state => ({
   isAuth: getIsAuth(state),
   isFetching: getIsFetching(state)
 });
-
-// export default connect(MSTP, {
-//   getUsersOnPageThunk,
-//   getUsersOnPageThunk,
-//   getUserDataThunk,
-//   currentPageAC,
-//   setUserDataAC
-// })(UsersContainer);
-
 export default compose(
   connect(MSTP, {
     getUsersOnPageThunk,
