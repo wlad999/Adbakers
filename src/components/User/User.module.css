@@ -5,7 +5,12 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+
+    background: teal url(../../assets//images/street.jpg);
+    background-blend-mode: screen;
+    font-size: 20px;
+    margin: auto;
+    background-size: cover;
 }
 
 .firstLine {
@@ -17,14 +22,25 @@
 
 .box {
     min-height: 180px;
-    width: 50%;
-    background-color: aquamarine;
+    width: 70%;
+    border-radius: 10px;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    padding: 25px;
+    box-shadow: 10px 20px 10px 28px rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    background-size: cover;
+    background-blend-mode: screen;
+    display: flex;
+    flex-direction: column;
+}
 
-    padding: 15px;
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
 }
 
 .scroll {
@@ -38,22 +54,54 @@ img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    /* display: block; */
+    border: rgba(235, 231, 227, 0.8) 15px solid;
+    box-shadow: 5px 3px 10px 5px rgba(0, 0, 0, 0.25);
+}
+
+.info {
+    min-width: 50%;
+    text-align: end;
+    margin: 10px;
+    background-color: rgba(235, 231, 227, 0.8);
+    font-size: 18px;
+    padding: 20px;
+    color: rgba(63, 62, 61, 0.8);
+    border-radius: 10px;
+    box-shadow: 5px 3px 10px 5px rgba(0, 0, 0, 0.25);
+}
+
+.lineSecond {
+    border-bottom: 2px solid rgba(150, 149, 148, 0.7);
+    position: relative;
+    margin-bottom: 0px;
+    font-weight: 700;
+    font-family: "Lato", AdobeInvisFont, Tahoma, MyriadPro-Regular, sans-serif;
+    color: #555555;
+    font-size: 18px;
+    height: 20px;
 }
 
 .closeBut {
     margin-right: -45px;
-    margin-top: -175px;
+    margin-top: -45px;
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    background-color: white;
+    background-color: transparent;
     cursor: pointer;
+    margin-left: auto;
+    margin-bottom: 5px;
+    color: rgba(63, 62, 61, 0.8);
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 10px 20px 10px 28px rgba(0, 0, 0, 0.25);
+
 }
 
 .text {
     font-weight: 700;
     font-family: "Lato", AdobeInvisFont, Tahoma, MyriadPro-Regular, sans-serif;
     color: #555555;
-    font-size: 16px;
+    font-size: 18px;
+    height: 20px;
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./User.module.css";
 import userImg from "../../assets/images/users.png";
+import ananimus from "../../assets/images/ananimus.jpg";
 
 const User = props => {
   let [userData, setUserData] = useState(props.userData);
@@ -16,26 +17,22 @@ const User = props => {
   return (
     <div className={styles.container}>
       <div className={styles.box}>
-        <div className={styles.firstLine}>
-          <img src={userData ? userData.avatar : userImg} alt="avatar" />
-          <button className={styles.closeBut} onClick={closeModal}>
-            X
-          </button>
-        </div>
-        <div className={styles.scroll}>
-          {props.isFetching ? (
-            <p>"PLEASE WAIT A LITTLE BIT"</p>
-          ) : (
-            <>
-              <p className={styles.text}>
-                {userData ? userData.first_name : "PLEASE WAIT A LITTLE BIT"}
-              </p>
-              <p className={styles.text}>
-                {userData ? userData.last_name : null}
-              </p>
-              <p className={styles.text}>{userData ? userData.email : null}</p>
-            </>
-          )}
+        <button className={styles.closeBut} onClick={closeModal}>
+          X
+        </button>
+        <div className={styles.flex}>
+          <img src={userData ? userData.avatar : ananimus} alt="avatar" />
+          <div className={styles.info}>
+            <p className={styles.lineSecond}>
+              {userData ? userData.first_name : "PLEASE WAIT A LITTLE BIT"}
+            </p>
+            <p className={styles.lineSecond}>
+              {userData ? userData.last_name : null}
+            </p>
+            <p className={styles.lineSecond}>
+              {userData ? userData.email : null}
+            </p>
+          </div>
         </div>
       </div>
     </div>

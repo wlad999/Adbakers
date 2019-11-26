@@ -40,12 +40,6 @@ class UsersContainer extends React.Component {
   };
 
   render() {
-    if (!this.props.isAuth) {
-      return <Redirect to={"/"} />;
-    }
-
-    // const token = localStorage.getItem("userToken");
-
     const {
       users,
       userData,
