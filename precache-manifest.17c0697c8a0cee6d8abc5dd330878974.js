@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bdbe939574572b1ee1695c4e7fe3f984",
+    "revision": "229ae5186fbadf14bed3bc749e8f4dfc",
     "url": "/Adbakers/index.html"
   },
   {
-    "revision": "1b1e46f7b77fde69cc65",
+    "revision": "f631d24f27d9e64ebe89",
     "url": "/Adbakers/static/css/main.3ce67b05.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Adbakers/static/js/2.c2c3aa52.chunk.js"
   },
   {
-    "revision": "1b1e46f7b77fde69cc65",
-    "url": "/Adbakers/static/js/main.ec195ed5.chunk.js"
+    "revision": "f631d24f27d9e64ebe89",
+    "url": "/Adbakers/static/js/main.a89c693a.chunk.js"
   },
   {
     "revision": "9274d0e2db99b474cbc3",
