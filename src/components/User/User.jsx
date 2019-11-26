@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styles from "./User.module.css";
-import userImg from "../../assets/images/users.png";
 import ananimus from "../../assets/images/ananimus.jpg";
 
 const User = props => {
@@ -13,6 +12,8 @@ const User = props => {
     props.showHideUser();
     props.setUserDataAC(false);
   };
+  let isCheck = props.isFetching;
+  console.log(isCheck);
 
   return (
     <div className={styles.container}>
@@ -21,7 +22,10 @@ const User = props => {
           X
         </button>
         <div className={styles.flex}>
-          <img src={userData ? userData.avatar : ananimus} alt="avatar" />
+          <img
+            src={props.isFetching ? ananimus : userData.avatar}
+            alt="avatar"
+          />
           <div className={styles.info}>
             <p className={styles.lineSecond}>
               {userData ? userData.first_name : "PLEASE WAIT A LITTLE BIT"}

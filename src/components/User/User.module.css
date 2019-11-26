@@ -98,6 +98,11 @@ img {
 
 }
 
+.closeBut:hover {
+    background-color: teal;
+    opacity: 0.5;
+}
+
 .text {
     font-weight: 700;
     font-family: "Lato", AdobeInvisFont, Tahoma, MyriadPro-Regular, sans-serif;

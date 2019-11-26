@@ -30,7 +30,7 @@ const usersReducer = (state = initialState, action) => {
     case actionTypes.IS_FETCH:
       return {
         ...state,
-        isFetching: action.boolean
+        isFetching: action.isFetching
       };
 
     default:

@@ -23,7 +23,6 @@ class LoginContainer extends React.Component {
   };
   componentDidUpdate(prevProps, prevState) {
     if (prevState !== this.state) {
-      console.log("IS CHANGING");
       if (
         (this.state.login.length > 0) &
         (this.state.login.length < 8) &
@@ -110,7 +109,7 @@ class LoginContainer extends React.Component {
     const { login, password } = this.state;
 
     if (login.length === 0 || password.length === 0) {
-      this.setState({ errorLogin: "Заполните Логин и Пароль" });
+      this.setState({ errorSubmit: "Заполните Логин и Пароль" });
       return;
     }
     if (login.length < 8 || password.length < 8) {
@@ -132,7 +131,6 @@ class LoginContainer extends React.Component {
   };
 
   handleErrorLogin = resp => {
-    console.log("RESP", resp);
     if (resp === undefined) {
       this.setState({
         errorSubmit: "Неправильный пароль или логин",

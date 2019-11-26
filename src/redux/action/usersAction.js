@@ -1,9 +1,9 @@
 import { getUsersRequest, getUserDataRequest } from "../../api/request";
 import { actionTypes } from "./constants";
 
-export const toggleIsFetching = boolean => ({
+export const toggleIsFetching = isFetching => ({
   type: actionTypes.IS_FETCH,
-  boolean
+  isFetching
 });
 
 export const getUsersAC = data => ({
@@ -31,7 +31,7 @@ export const getUsersOnPageThunk = currentPage => {
 };
 export const getUserDataThunk = id => {
   return dispatch => {
-    dispatch(toggleIsFetching(false));
+    dispatch(toggleIsFetching(true));
     getUserDataRequest(id).then(response => {
       dispatch(setUserDataAC(response.data));
       dispatch(toggleIsFetching(false));
