@@ -22,13 +22,6 @@
     padding-left: 5px;
 }
 
-.entry {
-    font-size: 13px;
-    color: grey;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-}
-
 .inputModule {
     text-align: start;
     display: flex;
@@ -48,6 +41,7 @@
     margin-top: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
+    font-weight: 700;
     background: transparent;
     color: #555555;
 }
@@ -56,8 +50,8 @@
     padding-top: 10px;
     color: red;
     min-height: 60px;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Lato", AdobeInvisFont, Tahoma, MyriadPro-Regular, sans-serif;
+    font-weight: 700;
 
 }
 
@@ -71,8 +65,8 @@
     font-size: 14px;
     box-shadow: 0 5px 10px rgb(252, 132, 44);
     border: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
+    font-family: "Lato", AdobeInvisFont, Tahoma, MyriadPro-Regular, sans-serif;
+    font-weight: 700;
     cursor: pointer;
 }
 
@@ -80,11 +74,7 @@
     outline: none;
 }
 
-.butModule {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
+
 
 @media(min-width: 767px) {
     .pageWrapper {
@@ -105,26 +95,13 @@
     }
 
     .input {
-        font-size: 15px;
-        height: 50px;
-        width: 270px;
         text-align: start;
         vertical-align: bottom;
         border: none;
         border-bottom: 1px solid grey;
         margin-top: 20px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
         background: none;
         align-items: flex-start;
     }
 
-    .entry {
-        font-size: 13px;
-        padding-bottom: 35px;
-        color: grey;
-        text-align: start;
-        font-weight: bold;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
 }
