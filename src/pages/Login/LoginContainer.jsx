@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import styles from "./Login.module.css";
 import { sendLoginData } from "../../redux/action/loginAction";
 import { getIsAuth } from "../../redux/selectors/loginSelectots";
+import LoginForm from "./loginForm";
 
 class LoginContainer extends React.Component {
   state = {
@@ -104,7 +105,7 @@ class LoginContainer extends React.Component {
     this.props.history.push("/users");
   };
 
-  handleLogin = e => {
+  handleSubmitAuth = e => {
     e.preventDefault();
     const { login, password } = this.state;
 
@@ -150,42 +151,11 @@ class LoginContainer extends React.Component {
       <>
         <div className={styles.pageWrapper}>
           <div className={styles.loginWrapper}>
-            <form>
-              <div className={styles.inputModule}>
-                <label htmlFor="login" className={styles.invisible}>
-                  Login
-                </label>
-                <input
-                  type="text"
-                  name="login"
-                  id="login"
-                  onChange={this.handleInputs}
-                  placeholder="Логин *"
-                  className={styles.input}
-                  value={this.state.login}
-                />
-                <label htmlFor="password" className={styles.invisible}>
-                  Password
-                </label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  onChange={this.handleInputs}
-                  placeholder="Пароль *"
-                  className={styles.input}
-                  value={this.state.password}
-                />
-              </div>
-              <div className={styles.error}>
-                <p>{this.state.errorLogin}</p>
-                <p>{this.state.errorPassword}</p>
-                <p>{this.state.errorSubmit}</p>
-              </div>
-              <button onClick={this.handleLogin} className={styles.button}>
-                Вход
-              </button>
-            </form>
+            <LoginForm
+              state={this.state}
+              handleInputs={this.handleInputs}
+              handleSubmitAuth={this.handleSubmitAuth}
+            />
           </div>
         </div>
       </>
