@@ -1,5 +1,4 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
 import User from "../../components/User/User";
 import { connect } from "react-redux";
 import styles from "./Users.module.css";
