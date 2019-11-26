@@ -10,12 +10,14 @@ class LoginContainer extends React.Component {
     password: "",
     error: ""
   };
+
   handleInputs = e => {
     const { name, value } = e.target;
 
     this.setState({
       [name]: value
     });
+
     setTimeout(() => {
       if ((this.state.login.length > 0) & (this.state.login.length < 8)) {
         this.setState({
@@ -37,10 +39,10 @@ class LoginContainer extends React.Component {
         });
       } else if (
         (this.state.password.length > 0) &
-        (this.state.password.length > 16)
+        (this.state.password.length > 18)
       ) {
         this.setState({
-          error: "Пароль должен состоять максимум из 16 символов"
+          error: "Пароль должен состоять максимум из 18 символов"
         });
       } else {
         this.setState({

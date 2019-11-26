@@ -4,6 +4,9 @@ import User from "../../components/User/User";
 import { connect } from "react-redux";
 import styles from "./Users.module.css";
 import UsersOnPage from "./UsersOnPage";
+import { withAuthRedirect } from "../../components/hoc/withAuthRedirect";
+import { compose } from "redux";
+
 import {
   getUserDataThunk,
   getUsersOnPageThunk,
@@ -41,7 +44,7 @@ class UsersContainer extends React.Component {
       return <Redirect to={"/"} />;
     }
 
-    const token = localStorage.getItem("userToken");
+    // const token = localStorage.getItem("userToken");
 
     const {
       users,
@@ -53,7 +56,6 @@ class UsersContainer extends React.Component {
       setUserDataAC,
       isFetching
     } = this.props;
-    console.log("isFetching", isFetching);
 
     return (
       <div className={styles.wrapper}>
@@ -91,10 +93,21 @@ let MSTP = state => ({
   isFetching: getIsFetching(state)
 });
 
-export default connect(MSTP, {
-  getUsersOnPageThunk,
-  getUsersOnPageThunk,
-  getUserDataThunk,
-  currentPageAC,
-  setUserDataAC
-})(UsersContainer);
+// export default connect(MSTP, {
+//   getUsersOnPageThunk,
+//   getUsersOnPageThunk,
+//   getUserDataThunk,
+//   currentPageAC,
+//   setUserDataAC
+// })(UsersContainer);
+
+export default compose(
+  connect(MSTP, {
+    getUsersOnPageThunk,
+    getUsersOnPageThunk,
+    getUserDataThunk,
+    currentPageAC,
+    setUserDataAC
+  }),
+  withAuthRedirect
+)(UsersContainer);
