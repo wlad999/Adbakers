@@ -31,7 +31,8 @@ class LoginContainer extends React.Component {
         const errLoginMinLength = "Логин должен состоять минимум из 8 знаков";
         if (this.state.errorLogin !== errLoginMinLength) {
           this.setState({
-            errorLogin: errLoginMinLength
+            errorLogin: errLoginMinLength,
+            errorSubmit: ""
           });
         }
       } else if (
@@ -42,7 +43,8 @@ class LoginContainer extends React.Component {
           "Логин должен состоять максимум из 18 символов";
         if (this.state.errorLogin !== errLoginMinLength) {
           this.setState({
-            errorLogin: errLoginMinLength
+            errorLogin: errLoginMinLength,
+            errorSubmit: ""
           });
         }
       } else if (
@@ -53,7 +55,8 @@ class LoginContainer extends React.Component {
         const errLoginMinLength = "";
         if (this.state.errorLogin !== errLoginMinLength) {
           this.setState({
-            errorLogin: errLoginMinLength
+            errorLogin: errLoginMinLength,
+            errorSubmit: ""
           });
         }
       } else if (
@@ -64,7 +67,8 @@ class LoginContainer extends React.Component {
         const errPassMinLength = "Пароль должен состоять минимум из 8 знаков";
         if (this.state.errPassMinLength !== errPassMinLength) {
           this.setState({
-            errorPassword: errPassMinLength
+            errorPassword: errPassMinLength,
+            errorSubmit: ""
           });
         }
       } else if (
@@ -75,7 +79,8 @@ class LoginContainer extends React.Component {
           "Пароль должен состоять максимум из 18 символов";
         if (this.state.errorPassword !== errPassMinLength) {
           this.setState({
-            errorPassword: errPassMinLength
+            errorPassword: errPassMinLength,
+            errorSubmit: ""
           });
         }
       } else if (
@@ -86,7 +91,8 @@ class LoginContainer extends React.Component {
         const errPassMinLength = "";
         if (this.state.errorPassword !== errPassMinLength) {
           this.setState({
-            errorPassword: errPassMinLength
+            errorPassword: errPassMinLength,
+            errorSubmit: ""
           });
         }
       }
